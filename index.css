@@ -1,0 +1,250 @@
+
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+body,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+}
+/*css reset*/
+
+body {
+  background-color: #fff;
+  font-family: "나눔고딕", NanumGothic, Nanum Gothic, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.ff14_snb {
+  position: absolute;
+  width: 100%;
+  min-width: 1200px;
+  height: 70px;
+  background-color: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.ff14_snb:after {
+  position: absolute;
+  z-index: 1;
+  top: 69px;
+  left: 0;
+  right: 0;
+  display: block;
+  clear: both;
+  content: "";
+  height: 1px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.ff14_snb .wrap {
+  position: relative;
+  height: 70px;
+  z-index: 2;
+}
+.ff14_snb .wrap:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.ff14_snb .wrap .nav:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.ff14_snb .wrap .nav > li {
+  position: relative;
+  float: left;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  margin-left: 65px;
+}
+.ff14_snb .wrap .nav > li:first-child {
+  margin-left: 0;
+}
+.ff14_snb .wrap .nav > li > span {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+.ff14_snb .wrap .nav > li > span > a {
+  position: relative;
+  text-decoration: none;
+  color: #dbdbdb;
+  font-size: 18px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+.ff14_snb .wrap .nav > li > span > a:after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  margin-left: -17px;
+  width: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: all 0.3s;
+  content: "";
+}
+.ff14_snb .wrap .nav > li.on > span > a:after,
+.ff14_snb .wrap .nav > li:hover > span > a:after {
+  width: 34px;
+  background-color: #1c81ff;
+}
+
+.ff14_snb .wrap .nav > li .sub {
+  position: absolute;
+  left: 50%;
+  display: none;
+  padding: 0 0 22px;
+  width: 122px;
+  margin-top: 10px;
+  margin-left: -61px;
+}
+.ff14_snb .wrap .nav > li .sub > li {
+  margin-bottom: 2px;
+  width: 100%;
+  height: 34px;
+}
+.ff14_snb .wrap .nav > li .sub > li a {
+  text-decoration: none;
+}
+.ff14_snb .wrap .nav > li .sub > li a > span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 34px;
+  letter-spacing: -0.025em;
+  word-spacing: -0.05em;
+  color: #8b8b8b;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.ff14_snb .wrap .nav > li .sub > li a > span:after,
+.ff14_snb .wrap .nav > li .sub > li a > span:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 11;
+  transform: scale(0);
+  transition: 0.5s;
+  content: "";
+}
+.ff14_snb .wrap .nav > li .sub > li a > span:before {
+  border-bottom: 1px solid #2678ff;
+  border-left: 1px solid #2678ff;
+  transform-origin: 0 100%;
+}
+.ff14_snb .wrap .nav > li .sub > li a > span:after {
+  border-top: 1px solid #2678ff;
+  border-right: 1px solid #2678ff;
+  transform-origin: 100% 0;
+}
+.ff14_snb .wrap .nav > li .sub > li a > span:hover {
+  color: #d4d4d4;
+}
+.ff14_snb .wrap .nav > li .sub > li a > span:hover:after,
+.ff14_snb .wrap .nav > li .sub > li a > span:hover:before {
+  transform: scale(1);
+}
+.ff14_snb.over {
+  border-bottom: 1px solid #222;
+}
+.ff14_snb.over.main {
+  background: #000;
+}
+.ff14_snb.over .wrap .nav > li > span {
+  height: 70px;
+}
+.ff14_snb.over .wrap .nav > li > span > a {
+  color: #fff;
+}
+.ff14_snb.over .wrap .nav > li.shop > span > a {
+  color: #3289ff;
+}
+.ff14_snb.over .wrap .nav > li .sub {
+  display: block;
+}
+
+.over {
+  height: 318px;
+}
